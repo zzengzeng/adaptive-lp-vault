@@ -43,9 +43,7 @@
 通常采用 **Synthetix 质押模型**。该模型通过一个全局变量记录每单位代币的累计收益，避免了因用户过多而导致循环计算的高昂 Gas 费。
 
 **计算公式参考：**
-
-
-其中  随时间不断累积：
+$$UserReward = StakedAmount \times (RewardPerToken_{current} - RewardPerToken_{at\_entry})$$其中 $RewardPerToken$ 随时间不断累积：$$RewardPerToken_{new} = RewardPerToken_{old} + \frac{RewardRate \times \Delta t}{TotalStaked}$$
 
 
 ---
